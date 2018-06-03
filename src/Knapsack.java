@@ -3,18 +3,18 @@ import java.util.Scanner; //Scanner used to read in user input
  
 public class Knapsack{ //Class that contains both knapsack problems
 	
-	Scanner input = new Scanner(System.in);//Creating an instance of the scanner class
+	static Scanner input = new Scanner(System.in);//Creating an instance of the scanner class
   
     public static void main(String args[]){ //Main method where program starts
       
-    	Knapsack ks = new Knapsack();//Creating an instance of the knapsack class
-    	ks.runProgram();//Running the program
+    
+    	runProgram();//Running the program
   
     
     }
     
     
-    public void runProgram(){ 
+    public static void runProgram(){ 
  	
     		while(true){//While loop that will run the program until user exits
     		
@@ -32,13 +32,13 @@ public class Knapsack{ //Class that contains both knapsack problems
     			else if(answer == 3)//If user enters 3, exit program
     				System.exit(0);//exit program
     			else//if user enters invalid input
-    				System.out.println("Invalid input.\nPlease enter a valid input");//prompt user for valid input
+    				System.out.println("Invalid input.\nPlease enter a valid input\n");//prompt user for valid input
     		
     		}
     	
     }
     
-    public void getInfo(int operation){ //Method that gets info from user
+    public static void getInfo(int operation){ //Method that gets info from user
     	
     
    
@@ -92,7 +92,7 @@ public class Knapsack{ //Class that contains both knapsack problems
     
     
 
-    public void fractionalKnapsack(int numberItems, int maxVolume, int[][] items){ //fractional knapsack funtion
+    public static void fractionalKnapsack(int numberItems, int maxVolume, int[][] items){ //fractional knapsack funtion
     	
     	int j = 0; //index initilized to 0
     	float sum = 0; //the sum of the max profit
@@ -132,7 +132,7 @@ public class Knapsack{ //Class that contains both knapsack problems
     
     
     
-    public void zerOneKnapsack(int numberItems, int maxVolume, int[] weights, int[] profit) { //runs 0/1 knapsack function
+    public static void zerOneKnapsack(int numberItems, int maxVolume, int[] weights, int[] profit) { //runs 0/1 knapsack function
   
   	  int[][] items = new int[numberItems+1][maxVolume+1]; //2D array to hold items taken
   	  int[][] solution = new int[numberItems+1][maxVolume+1];//2D array to hold the problems solution
